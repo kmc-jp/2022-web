@@ -1,0 +1,20 @@
+version: "3"
+services:
+  front_install:
+    build:
+      context: .
+      dockerfile: ./front/docker_scripts/install/Dockerfile
+    container_name: 2022-web-front
+    volumes:
+      - 2022-web-welcome--node_modules:/home/2022-web/front/node_modules
+      - ./front:/home/2022-web/front
+  front_serve:
+    build:
+      context: .
+      dockerfile: ./front/docker_scripts/serve/Dockerfile
+    container_name: 2022-web-front-server
+    volumes:
+      - 2022-web-welcome--node_modules:/home/2022-web/front/node_modules
+      - ./front:/home/2022-web/front
+volumes:
+  2022-web-welcome--node_modules:
