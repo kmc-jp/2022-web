@@ -37,7 +37,7 @@ function App() {
         <div>
           {
             projects.filter((x, index) => index <= 5 ).map((x, index) => {
-              return <ProjectRenderer index={index - 6} projectName={x}/>
+              return <ProjectRenderer key={index} index={index - 6} projectName={x}/>
             })
           }
         </div>
@@ -47,7 +47,7 @@ function App() {
         <div>
           {
             projects.filter((x, index) => index >= 6 ).map((x, index) => {
-              return <ProjectRenderer index={index + 1} projectName={x}/>
+              return <ProjectRenderer key={index} index={index + 1} projectName={x}/>
             })
           }
         </div>
