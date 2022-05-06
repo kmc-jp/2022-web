@@ -1,0 +1,24 @@
+name: welcome-front-build
+
+on:
+  push:
+  pull_request:
+    types: [opened]
+  workflow_dispatch:
+
+jobs:
+  welcome-front-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout/setup
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: install
+        run: "yarn install"
+        working-directory: ./welcome/front
+      - name: build
+        run: "yarn build"
+        working-directory: ./welcome/front

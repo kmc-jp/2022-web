@@ -1,0 +1,24 @@
+name: welcome-front-lint
+
+on:
+  push:
+  pull_request:
+    types: [opened]
+  workflow_dispatch:
+
+jobs:
+  welcome-front-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout/setup
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: install
+        run: "yarn install"
+        working-directory: ./welcome/front
+      - name: lint
+        run: "yarn lint"
+        working-directory: ./welcome/front
