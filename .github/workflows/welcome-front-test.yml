@@ -1,0 +1,22 @@
+name: welcome-front-test
+
+on:
+  push:
+  pull_request:
+    types: [opened]
+  workflow_dispatch:
+
+jobs:
+  welcome-front-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout/setup
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: install
+        run: "yarn install"
+      - name: test
+        run: "yarn test"
