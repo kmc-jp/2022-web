@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/welcome/front"
     schedule:
       interval: "daily"
       timezone: "Asia/Tokyo"
