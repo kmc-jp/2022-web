@@ -1,5 +1,7 @@
 .App {
-  background: #38383E;
+  background: linear-gradient(to left, #3838385d, #222222b9), url("./background.jpg");
+  background-size: cover;
+  background-position: center;
   text-align: center;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   display: flex;
