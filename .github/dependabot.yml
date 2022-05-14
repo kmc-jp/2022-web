@@ -10,3 +10,8 @@ updates:
     schedule:
       interval: "daily"
       timezone: "Asia/Tokyo"
+  - package-ecosystem: "npm"
+    directory: "/exercises/section-01/front"
+    schedule:
+      interval: "daily"
+      timezone: "Asia/Tokyo"
