@@ -56,6 +56,12 @@ yarn run ex1
 
 そこまでできたら、http://localhost:9990 にアクセスして確認してください。進捗管理シートの「演習1のページを表示」にチェックを入れておいてください。
 
+### 解答
+
+演習1の解答は [ここ](https://github.com/kmc-jp/2022-web/blob/main/exercises/section-01/answer.md#%E6%BC%94%E7%BF%921) にあります。
+
+ここまでできたら、進捗管理シートの「演習1終了」にチェックを入れておいてください。
+
 ## 演習2
 
 ### 💪 Dockerを使わない場合
@@ -86,6 +92,12 @@ yarn run ex2
 
 そこまでできたら、http://localhost:9990 にアクセスして確認してください。
 
+### 解答
+
+演習2の解答は [ここ](https://github.com/kmc-jp/2022-web/blob/main/exercises/section-01/answer.md#%E6%BC%94%E7%BF%922) にあります。
+
+ここまでできたら、進捗管理シートの「演習2終了」にチェックを入れておいてください。
+
 ## 演習3
 
 ### 💪 Dockerを使わない場合
@@ -115,6 +127,12 @@ yarn run ex3
 ```
 
 そこまでできたら、http://localhost:9990 にアクセスして確認してください。
+
+### 解答
+
+演習3の解答は [ここ](https://github.com/kmc-jp/2022-web/blob/main/exercises/section-01/answer.md#%E6%BC%94%E7%BF%923) にあります。
+
+ここまでできたら、進捗管理シートの「演習3終了」にチェックを入れておいてください。
 
 ## 演習を終わる際の閉じ方
 
