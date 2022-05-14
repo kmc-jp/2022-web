@@ -1,0 +1,30 @@
+name: exercises-01-front-build
+
+on:
+  push:
+  pull_request:
+    types: [opened]
+  workflow_dispatch:
+
+jobs:
+  exercises-01-front-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout/setup
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: install
+        run: "yarn install"
+        working-directory: ./exercises/section-01/front
+      - name: build ex1
+        run: "yarn build-ex1"
+        working-directory: ./exercises/section-01/front
+      - name: build ex2
+        run: "yarn build-ex2"
+        working-directory: ./exercises/section-01/front
+      - name: build ex3
+        run: "yarn build-ex3"
+        working-directory: ./exercises/section-01/front
