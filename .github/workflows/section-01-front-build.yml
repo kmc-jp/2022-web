@@ -1,0 +1,24 @@
+name: section-01-front-build
+
+on:
+  push:
+  pull_request:
+    types: [opened]
+  workflow_dispatch:
+
+jobs:
+  section-01-front-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout/setup
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: install
+        run: "yarn install"
+        working-directory: ./section-template/section-01/front
+      - name: build
+        run: "yarn build"
+        working-directory: ./section-template/section-01/front
