@@ -1,0 +1,154 @@
+# 演習の解答
+
+`body`タグの中のみ記載
+
+## 演習1
+
+```html
+<body>
+  <h1>演習1</h1>
+
+  <h1>KMC</h1>
+  <img src="./images/kmc.png" alt="KMC logo">
+  <h2 id="about">KMCについて</h2>
+  <p>KMC (京大マイコンクラブ)<br>京大マイコンクラブは京都大学を中心に活動している京都大学全学公認のコンピュータサークルです。</p>
+</body>
+```
+
+## 演習2
+
+```html
+<body>
+  <h1>演習2</h1>
+
+  <h3>リンク集</h3>
+  <dl>
+    <dt>Twitter</dt>
+    <dd>
+      <a href="https://twitter.com/kmc_jp" target="_blank">京大マイコンクラブ</a>
+    </dd>
+    <dt>ブログ</dt>
+    <dd>
+      <a href="https://blog.kmc.gr.jp" target="_blank">KMC活動ブログ</a>
+    </dd>
+    <dt>GitHub</dt>
+    <dd>
+      <a href="https://github.com/kmc-jp" target="_blank">Kyoto-U Microcomputer Club</a>
+    </dd>
+  </dl>
+  <h2 id="project">プロジェクト</h2>
+  <ul>
+    <li>お絵描きプロジェクト</li>
+    <li>DTM練習会</li>
+    <li>みんげー</li>
+    <li>Android勉強会</li>
+    <li>Unity勉強会</li>
+    <li>競プロ練習会</li>
+    <li>Blender講習会</li>
+  </ul>
+</body>
+```
+
+## 演習3
+
+```html
+<body>
+  <h1>演習3</h1>
+
+    <li><a href="#about">KMCについて</a></li>
+  <li><a href="#project">プロジェクト</a></li>
+  <li><a href="#join">入部</a></li>
+  <h1>KMC</h1>
+  <img src="./images/kmc.png" alt="KMC logo">
+  <h2 id="about">KMCについて</h2>
+  <p>KMC (京大マイコンクラブ)<br>京大マイコンクラブは京都大学を中心に活動している京都大学全学公認のコンピュータサークルです。</p>
+  <h3>リンク集</h3>
+  <dl>
+    <dt>Twitter</dt>
+    <dd>
+      <a href="https://twitter.com/kmc_jp" target="_blank">京大マイコンクラブ</a>
+    </dd>
+    <dt>ブログ</dt>
+    <dd>
+      <a href="https://blog.kmc.gr.jp" target="_blank">KMC活動ブログ</a>
+    </dd>
+    <dt>GitHub</dt>
+    <dd>
+      <a href="https://github.com/kmc-jp" target="_blank">Kyoto-U Microcomputer Club</a>
+    </dd>
+  </dl>
+  <h2 id="project">プロジェクト</h2>
+  <ul>
+    <li>お絵描きプロジェクト</li>
+    <li>DTM練習会</li>
+    <li>みんげー</li>
+    <li>Android勉強会</li>
+    <li>Unity勉強会</li>
+    <li>競プロ練習会</li>
+    <li>Blender講習会</li>
+  </ul>
+  <h2 id="join">入部</h2>
+  <form action="">
+    <dl>
+      <dt>お名前</dt>
+      <dd>
+        <input type="text" name="" id="">
+      </dd>
+      <dt>メールアドレス</dt>
+      <dd>
+        <input type="email" name="" id="">
+      </dd>
+      <dt>性別</dt>
+      <dd>
+        <input type="radio" name="gender" id="woman">
+        <label for="woman">女性</label>
+        <input type="radio" name="gender" id="man">
+        <label for="man">男性</label>
+        <input type="radio" name="gender" id="other">
+        <label for="other">その他</label>
+      </dd>
+      <dt>年齢</dt>
+      <dd>
+        <input type="number" name="" id="">
+      </dd>
+      <dt>出身地</dt>
+      <dd>
+        <select value="">
+          <option name="" id="">北海道</option>
+          <option name="" id="">東北</option>
+          <option name="" id="">関東</option>
+          <option name="" id="">甲信越</option>
+          <option name="" id="">中部</option>
+          <option name="" id="">北陸</option>
+          <option name="" id="">近畿</option>
+          <option name="" id="">中国</option>
+          <option name="" id="">四国</option>
+          <option name="" id="">九州</option>
+          <option name="" id="">沖縄</option>
+        </select>
+      </dd>
+      <dt>ロール</dt>
+      <dd>
+        <input type="checkbox" name="role" id="painting">
+        <label for="painting">お絵描き</label>
+        <input type="checkbox" name="role" id="dtm">
+        <label for="dtm">DTM</label>
+        <input type="checkbox" name="role" id="game">
+        <label for="game">ゲーム制作</label>
+        <input type="checkbox" name="role" id="kyo-pro">
+        <label for="kyo-pro">競プロ</label>
+      </dd>
+      <dt>アイコン画像</dt>
+      <dd>
+        <input type="file" name="" id="">
+      </dd>
+      <dt>その他</dt>
+      <dd>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </dd>
+      <dd><input type="reset" value="リセット"></dd>
+      <dd><button>送信</button></dd>
+    </dl>
+  </form>
+</body>
+```
