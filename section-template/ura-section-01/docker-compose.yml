@@ -1,0 +1,14 @@
+version: "3"
+services:
+  front:
+    build:
+      context: .
+      dockerfile: ./front/Dockerfile
+    container_name: 2022-web-ura-section-01-front
+    ports:
+      - 9900:9900
+    volumes:
+      - ./front:/home/2022WEB/2022-web/ura-section-01/front
+      - 2022-web-ura-section-01-front--node_modules:/home/2022WEB/2022-web/ura-section-01/front/node_modules
+volumes:
+  2022-web-ura-section-01-front--node_modules:
