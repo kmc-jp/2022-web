@@ -176,10 +176,10 @@
 例えば、以下のようなフォルダ/ファイル群を考えます。
 
 ```
- parent
-├─  child
-│   └─  child1.txt
-└─  child2.txt
+parent
+├── child
+│   └── child2.txt
+└── child2.txt
 ```
 
 `parent`フォルダから見た、`child1.txt`の相対パスは、`./child/child1.txt`と表されます。<br>
