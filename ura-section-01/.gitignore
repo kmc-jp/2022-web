@@ -1,0 +1,6 @@
+./*
+!.gitignore
+!docker-compose.yml
+!Makefile
+/front/*
+!/front/Dockerfile
