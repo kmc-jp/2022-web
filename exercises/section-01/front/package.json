@@ -12,7 +12,7 @@
     "ex3": "webpack serve -c webpack.exercise3.config.js"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^10.2.4",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
