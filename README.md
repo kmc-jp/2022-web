@@ -6,6 +6,9 @@
   - [手順](https://github.com/kmc-jp/2022-web/tree/main/section-template/section-01)
   - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-01.md)
   - [演習](https://github.com/kmc-jp/2022-web/tree/main/exercises/section-01)
+- 第2回 書いて覚えるCSS
+  - [手順](https://github.com/kmc-jp/2022-web/tree/main/section-template/section-02)
+  - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-02.md)
 
 ## 裏講座
 - 第1回 イチからWebpackのconfigを書いてTypeScriptをコンパイルする

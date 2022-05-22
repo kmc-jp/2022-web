@@ -392,7 +392,7 @@ div {
 ```css
 .square {
   height: 100px;
-  wight: 100px;
+  width: 100px;
 }
 ```
 
@@ -411,13 +411,13 @@ div {
 div {
   background-color: red;
   height: 100px;
-  weight: 100px;
+  width: 100px;
 }
 
 span {
-  background-color: blue;
+  background-color: aqua;
   height: 100px;
-  weight: 100px;
+  width: 100px;
 }
 ```
 
