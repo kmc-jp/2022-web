@@ -1,0 +1,18 @@
+.red-rectangle {
+  background-color: red;
+  height: 200px;
+  width: 400px;
+}
+
+.blue-rectangle {
+  background-color: blue;
+  height: 300px;
+  width: 100px;
+}
+
+.green-rectangle {
+  background-color: green;
+  border-radius: 16px;
+  height: 200px;
+  width: 400px;
+}
