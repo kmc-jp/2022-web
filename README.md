@@ -10,6 +10,9 @@
   - [手順](https://github.com/kmc-jp/2022-web/tree/main/section-template/section-02)
   - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-02.md)
   - [演習](https://github.com/kmc-jp/2022-web/tree/main/exercises/section-02)
+- 第3回 デザインパターン1
+  - [手順](https://github.com/kmc-jp/2022-web/blob/main/section-template/section-03/README.md)
+  - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-03.md)
 
 ## 裏講座
 - 第1回 イチからWebpackのconfigを書いてTypeScriptをコンパイルする

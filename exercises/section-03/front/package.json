@@ -1,0 +1,23 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build-ex1": "webpack -c webpack.exercise1.config.js",
+    "build-ex2": "webpack -c webpack.exercise2.config.js",
+    "build-ex3": "webpack -c webpack.exercise3.config.js",
+    "ex1": "webpack serve -c webpack.exercise1.config.js",
+    "ex2": "webpack serve -c webpack.exercise2.config.js",
+    "ex3": "webpack serve -c webpack.exercise3.config.js"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  }
+}

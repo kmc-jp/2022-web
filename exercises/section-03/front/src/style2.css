@@ -1,0 +1,33 @@
+.card {
+  border-radius: 16px;
+  box-shadow: 0 0 4px 4px #3332;
+  height: 120px;
+  margin-left: 32px;
+  margin-top: 32px;
+  overflow: hidden;
+  padding: 12px 24px 18px;
+  width: 320px;
+}
+
+.card__title {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.card__date {
+  color: #666;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0;
+  margin-left: 16px;
+}
+
+.card__text {
+  color: #333;
+  font-size: 14px;
+  margin: 0;
+  overflow: hidden scroll;
+  height: 90px;
+}

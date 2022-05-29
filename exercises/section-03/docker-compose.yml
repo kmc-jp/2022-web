@@ -1,0 +1,14 @@
+version: "3"
+services:
+  front:
+    build:
+      context: .
+      dockerfile: ./front/Dockerfile
+    container_name: 2022-web-exercise-section-03-front
+    ports:
+      - 9990:9990
+    volumes:
+      - ./front:/home/2022WEB/2022-web/exercise-section-03/front
+      - 2022-web-exercise-section-03-front--node_modules:/home/2022WEB/2022-web/exercise-section-03/front/node_modules
+volumes:
+  2022-web-exercise-section-03-front--node_modules:
