@@ -60,7 +60,7 @@ yarn run ex1
 
 ### 解答
 
-演習1の解答は [ここ](https://github.com/kmc-jp/2022-web/blob/main/exercises/section-02/answer.md#%E6%BC%94%E7%BF%921) にあります。
+演習1の解答は [演習3 解答1](https://github.com/kmc-jp/2022-web/blob/main/exercises/section-03/answer.md#%E6%BC%94%E7%BF%921) にあります。
 
 ここまでできたら、進捗管理シートの「演習1終了」にチェックを入れておいてください。
 
@@ -96,7 +96,7 @@ yarn run ex2
 
 ### 解答
 
-演習2の解答は [ここ](https://github.com/kmc-jp/2022-web/blob/main/exercises/section-03/answer.md#%E6%BC%94%E7%BF%922) にあります。
+演習2の解答は [演習3 解答2](https://github.com/kmc-jp/2022-web/blob/main/exercises/section-03/answer.md#%E6%BC%94%E7%BF%922) にあります。
 
 ここまでできたら、進捗管理シートの「演習2終了」にチェックを入れておいてください。
 
