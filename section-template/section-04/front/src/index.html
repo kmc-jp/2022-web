@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第4回 | Webサービス勉強会 2022</title>
+</head>
+<body>
+  <h1>第4回 Webアクセシビリティの基礎</h1>
+  <div class="sample--list">
+    <h2>アクセシブルな実装</h2>
+    <dl>
+      <dt class="sample--list-title">コントラストに問題のあるデザインの例</dt>
+      <dd class="sample--list-item">
+        <button class="contrast--not-accessible">
+          Click ME
+        </button>
+      </dd>
+      <dt class="sample--list-title">コントラストが十分に確保されているデザインの例</dt>
+      <dd class="sample--list-item">
+        <button class="contrast--accessible">
+          Click ME
+        </button>
+      </dd>
+    </dl>
+  </div>
+  <div class="sample--list">
+    <h2>画像の代替テキスト</h2>
+    <dl>
+      <dt class="sample--list-title">代替テキストが指定されていない画像の例</dt>
+      <dd class="sample--list-item">
+        <img src="./images/kmc.png">
+      </dd>
+      <dt class="sample--list-title">代替テキストが指定されている画像の例</dt>
+      <dd class="sample--list-item">
+        <img src="./images/kmc.png" alt="京大マイコンクラブのロゴ">
+      </dd>
+      <dt class="sample--list-title">画像が表示されていない例</dt>
+      <dd class="sample--list-item">
+        <img src="./images/kmc_null.png" alt="京大マイコンクラブのロゴ">
+      </dd>
+    </dl>
+    </dl>
+  </div>
+  <div class="sample--list">
+    <h2>セマンティックなHTML</h2>
+    <dl>
+      <dt class="sample--list-title">セマンティックでないリンク</dt>
+      <dd class="sample--list-item">
+        <p>
+          <span id="link-like">ペルシャ猫</span>は長毛種の代表的な品種で、古くからショーキャットとして認められる品種の一つである。
+        </p>
+      </dd>
+      <dt class="sample--list-title">セマンティックなリンク</dt>
+        <p>
+          <a href="https://ja.wikipedia.org/wiki/%E3%83%9A%E3%83%AB%E3%82%B7%E3%83%A3_(%E3%83%8D%E3%82%B3)" target="_blank">ペルシャ猫</a>は長毛種の代表的な品種で、古くからショーキャットとして認められる品種の一つである。
+        </p>
+    </dl>
+    </dl>
+  </div>
+  <div class="sample--list">
+    <h2>キーボードによるコントロール</h2>
+    <dl>
+      <dt class="sample--list-title">視覚的な手がかりがないボタン</dt>
+      <dd class="sample--list-item">
+        <button class="submit--not-accessible">提出</button>
+      </dd>
+      <dt class="sample--list-title">視覚的な手がかりが提供されているボタン
+      </dt>
+      <dd class="sample--list-item">
+        <button class="submit--accessible">提出</button>
+      </dd>
+    </dl>
+    </dl>
+  </div>
+  </body>
+  
+  </html>
