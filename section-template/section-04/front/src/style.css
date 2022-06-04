@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+}
+
+.sample--list {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.sample--list-title {
+  font-weight: bold;
+  margin-top: 32px;
+}
+
+.sample--list-item {
+  margin: 16px 0;
+}
+
+.contrast--not-accessible {
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 4px;
+  color: yellow;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 12px;
+}
+
+.contrast--accessible {
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 4px;
+  color: #1B365C;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 12px;
+}
+
+#link-like {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline 1px solid;
+}
+
+.submit--not-accessible {
+  background-color: #1d8322;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+  padding: 12px 48px;
+}
+
+.submit--not-accessible:hover {
+  background-color: #0f6d14;
+}
+
+.submit--accessible {
+  background-color: #1d8322;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 12px 48px;
+}
+
+.submit--accessible:focus-visible {
+  outline: 1px gray dashed;
+  outline-offset: 4px;
+}
+
+.submit--accessible:hover {
+  background-color: #0f6d14;
+}
