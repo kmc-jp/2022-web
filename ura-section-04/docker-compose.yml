@@ -1,0 +1,7 @@
+version: "3"
+services:
+  front:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: 2022-web-ura-section-04

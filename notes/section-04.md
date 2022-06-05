@@ -117,6 +117,6 @@ document.getElementById("link-like").addEventListener("click", () => {
 
 さて、ここまで聞けば [Accessibility Fundamentals](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/1-getting-started-lessons/3-accessibility/README.md) の画像 (Creating Accessible Webpages) に書かれていることがよく分かるようになっていると思います。
 
-![](https://raw.githubusercontent.com/microsoft/Web-Dev-For-Beginners/main/sketchnotes/webdev101-a11y.png)
+![Creating Accessible Webpages](https://raw.githubusercontent.com/microsoft/Web-Dev-For-Beginners/main/sketchnotes/webdev101-a11y.png)
 
 これからWebページを開発していく際、これらのことを常に意識していきましょう。今後もWebサービス勉強会では、定期的にWebアクセシビリティについて扱う予定です。

@@ -15,3 +15,18 @@ updates:
     schedule:
       interval: "daily"
       timezone: "Asia/Tokyo"
+  - package-ecosystem: "npm"
+    directory: "/exercises/section-02/front"
+    schedule:
+      interval: "daily"
+      timezone: "Asia/Tokyo"
+  - package-ecosystem: "npm"
+    directory: "/exercises/section-03/front"
+    schedule:
+      interval: "daily"
+      timezone: "Asia/Tokyo"
+  - package-ecosystem: "npm"
+    directory: "/section-template/section-04/front"
+    schedule:
+      interval: "daily"
+      timezone: "Asia/Tokyo"
