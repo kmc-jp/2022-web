@@ -24,7 +24,7 @@ Copyright (C) 1988-2020 Free Software Foundation, Inc.
 法律の許す限り、　無保証　です.
 ```
 
-続いて、**`ura-section-04`フォルダで**以下のように実行してください。
+続いて、**`docker-setup`フォルダで**以下のように実行してください。
 
 ```bash
 $ make up
