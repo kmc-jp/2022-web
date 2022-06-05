@@ -29,4 +29,4 @@
 
 ## その他
 - Docker環境のセットアップ
-  - [手順](https://github.com/kmc-jp/2022-web/blob/main/ura-section-04/README.md)
+  - [手順](https://github.com/kmc-jp/2022-web/blob/main/docker-setup/README.md)
