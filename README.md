@@ -17,7 +17,7 @@
 - 第4回 Webアクセシビリティの基礎
   - [開発環境構築手順](https://github.com/kmc-jp/2022-web/blob/main/section-template/section-04/README.md)
   - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-04.md)
-- 第5回
+- 第5回 可変レイアウト
   - [開発環境構築手順](https://github.com/kmc-jp/2022-web/blob/main/section-template/section-05/README.md)
   - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-05.md)
 
