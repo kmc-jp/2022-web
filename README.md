@@ -1,22 +1,25 @@
 # Webサービス勉強会2022
 
 - 第0回 (環境構築回)
-  - [手順](https://github.com/kmc-jp/2022-web/tree/main/welcome)
+  - [環境構築手順](https://github.com/kmc-jp/2022-web/tree/main/welcome)
 - 第1回 書いて覚えるHTML
-  - [手順](https://github.com/kmc-jp/2022-web/tree/main/section-template/section-01)
+  - [開発環境構築手順](https://github.com/kmc-jp/2022-web/tree/main/section-template/section-01)
   - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-01.md)
   - [演習](https://github.com/kmc-jp/2022-web/tree/main/exercises/section-01)
 - 第2回 書いて覚えるCSS
-  - [手順](https://github.com/kmc-jp/2022-web/tree/main/section-template/section-02)
+  - [開発環境構築手順](https://github.com/kmc-jp/2022-web/tree/main/section-template/section-02)
   - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-02.md)
   - [演習](https://github.com/kmc-jp/2022-web/tree/main/exercises/section-02)
 - 第3回 デザインパターン1
-  - [手順](https://github.com/kmc-jp/2022-web/blob/main/section-template/section-03/README.md)
+  - [開発環境構築手順](https://github.com/kmc-jp/2022-web/blob/main/section-template/section-03/README.md)
   - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-03.md)
   - [演習](https://github.com/kmc-jp/2022-web/tree/main/exercises/section-03)
 - 第4回 Webアクセシビリティの基礎
-  - [手順](https://github.com/kmc-jp/2022-web/blob/main/section-template/section-04/README.md)
+  - [開発環境構築手順](https://github.com/kmc-jp/2022-web/blob/main/section-template/section-04/README.md)
   - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-04.md)
+- 第5回
+  - [開発環境構築手順](https://github.com/kmc-jp/2022-web/blob/main/section-template/section-05/README.md)
+  - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-05.md)
 
 ## 裏講座
 - 第1回 イチからWebpackのconfigを書いてTypeScriptをコンパイルする
