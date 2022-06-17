@@ -5,11 +5,24 @@ services:
     environment:
         POSTGRES_PASSWORD: p@ssw0rd!
   app:
-    build: .
+    build: ./section-06-app
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    container_name: section-06-app
     volumes:
       - ./section-06-app:/app
     ports:
-      - "3000:3000"
+      - "33000:3000"
     depends_on:
       - db
+  front:
+    build: ./section-06-app-front
+    container_name: section-06-app-front
+    volumes:
+      - ./section-06-app-front:/front
+      - section-06-app-front__node_modules:/front/node_modules
+    ports:
+      - "32000:3000"
+    depends_on:
+      - db
+volumes:
+  section-06-app-front__node_modules:
