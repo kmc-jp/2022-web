@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: postgres:alpine3.16
+    environment:
+        POSTGRES_PASSWORD: p@ssw0rd!
+  app:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./section-06-app:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
