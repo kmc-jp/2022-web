@@ -1,17 +1,26 @@
 version: '3'
 services:
   db:
-    image: postgres:alpine3.16
+    image: mysql:8.0.28
     environment:
-        POSTGRES_PASSWORD: p@ssw0rd!
+      MYSQL_ROOT_PASSWORD: p@ssw0rd!
+    networks:
+      - section-06-app-network
+    # volumes: 
+      # - ./db:/var/lib/mysql
+    command: ["--default-authentication-plugin=mysql_native_password"]
+    ports: 
+      - 3306:3306
   app:
     build: ./section-06-app
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
     container_name: section-06-app
+    command: "rails s -b 0.0.0.0 -p 3000"
     volumes:
       - ./section-06-app:/app
     ports:
-      - "33000:3000"
+      - 31000:3000
+    networks:
+      - section-06-app-network
     depends_on:
       - db
   front:
@@ -21,8 +30,11 @@ services:
       - ./section-06-app-front:/front
       - section-06-app-front__node_modules:/front/node_modules
     ports:
-      - "32000:3000"
-    depends_on:
-      - db
+      - 32000:3000
+    networks:
+      - section-06-app-network
 volumes:
   section-06-app-front__node_modules:
+networks:
+  section-06-app-network:
+    external: true
