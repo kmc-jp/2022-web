@@ -2,14 +2,10 @@ require "json"
 
 class UsersController < ApplicationController
   before_action :login_user_params, only: :index
-  # before_action :set_user, only: %i[ show update destroy ]
 
   # GET /users
   def index
-    # @users = User.all
-
-    # render json: @users
-    
+    # 見つかったユーザーとパスワードのSHA256ハッシュが一致しているかどうかを見る
     if @login_user["password"] === Digest::SHA256.hexdigest(JSON.parse(params["user"])["password"])
       payload = {
         user_id: @login_user["user_id"],
@@ -23,11 +19,6 @@ class UsersController < ApplicationController
       render :json => payload, :status => 401
     end
   end
-
-  # GET /users/1
-  # def show
-  #   render json: @login_user
-  # end
 
   # POST /users
   def create
@@ -43,34 +34,19 @@ class UsersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /users/1
-  # def update
-  #   if @user.update(user_params)
-  #     render json: @user
-  #   else
-  #     render json: @user.errors, status: :unprocessable_entity
-  #   end
-  # end
-
-  # DELETE /users/1
-  # def destroy
-  #   @user.destroy
-  # end
+  def logout
+    puts "Log out"
+  end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    # def set_user
-    #   @user = User.find_by(user_id: params[:id])
-    # end
-
+    # user_idが一致するものを見つけてくる
     def login_user_params
       user_params_json = JSON.parse(params["user"])
-      user_params_json["password"] = Digest::SHA256.hexdigest(user_params_json["password"])
       user_params = ActionController::Parameters.new({"user" => user_params_json}).require(:user).permit(:user_id, :password)
       @login_user = User.find_by(user_id: user_params[:user_id])
     end
 
-    # Only allow a list of trusted parameters through.
+    # パスワードはSHA256に変換して保存
     def signup_user_params
       user_params_json = JSON.parse(params["user"])
       user_params_json["password"] = Digest::SHA256.hexdigest(user_params_json["password"])
