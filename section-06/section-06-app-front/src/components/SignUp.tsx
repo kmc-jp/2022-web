@@ -4,12 +4,36 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import { Alert, AlertTitle } from "@mui/material";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import { useNavigate } from "react-router-dom";
+
+const cookie = require("cookie");
 
 const SignUp = () => {
   const [id, setId] = React.useState<string>("");
   const [email, setEmail] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
+
+  const [dialogOpen, setDialogOpen] = React.useState(false);
+  const [formValidation, setFormValidation] = React.useState<{
+    id: boolean;
+    email: boolean;
+    password: boolean;
+  }>({
+    id: false,
+    email: false,
+    password: false,
+  });
+  const formValidationLabel = {
+    id: "ID",
+    email: "E-mail",
+    password: "Password",
+  };
 
   const [signUpError, setSignUpError] = React.useState<{
     error: boolean;
@@ -19,11 +43,23 @@ const SignUp = () => {
     message: "",
   });
 
+  const navigate = useNavigate();
+
   interface SignUpType {
-    id: number;
+    user_id: number;
+    session: string;
   }
 
+  const handleClose = () => {
+    setDialogOpen(false);
+  };
+
   const onClickSignUp = () => {
+    if (Object.values(formValidation).some((v) => v === false)) {
+      setDialogOpen(true);
+      return;
+    }
+
     axios
       .post(
         "http://localhost:31000/users",
@@ -43,21 +79,28 @@ const SignUp = () => {
       )
       .then((result: AxiosResponse<SignUpType>) => {
         const { data, status } = result;
-        console.log(data, status);
         if (status < 200 || status > 299) {
           setSignUpError({
             error: true,
             message: "",
           });
-          return;
+          throw new Error();
         }
         setSignUpError({
           error: false,
           message: "",
         });
+        document.cookie = cookie.serialize(
+          "user_id",
+          encodeURIComponent(data.user_id)
+        );
+        document.cookie = cookie.serialize(
+          "session",
+          encodeURIComponent(data.session)
+        );
+        navigate("/");
       })
       .catch((error: AxiosError<{ error: string }>) => {
-        console.error(error.message);
         setSignUpError({
           error: true,
           message: error.message,
@@ -87,6 +130,10 @@ const SignUp = () => {
           value={id}
           onChange={(e) => {
             setId(e.target.value);
+            setFormValidation({
+              ...formValidation,
+              id: /[0-9a-zA-Z\-_]+/.test(e.target.value),
+            });
           }}
         />
         <TextField
@@ -97,6 +144,13 @@ const SignUp = () => {
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
+            setFormValidation({
+              ...formValidation,
+              email:
+                /([0-9a-zA-Z]([0-9a-zA-Z\-\.])*@([0-9a-zA-Z][0-9a-zA-Z]*\.)+[a-zA-Z]{2,9})/.test(
+                  e.target.value
+                ),
+            });
           }}
         />
         <TextField
@@ -108,6 +162,10 @@ const SignUp = () => {
           value={password}
           onChange={(e) => {
             setPassword(e.target.value);
+            setFormValidation({
+              ...formValidation,
+              password: /[0-9a-zA-Z\-_\/*+.,!#$%&()~|]+/.test(e.target.value),
+            });
           }}
         />
         <Button
@@ -128,6 +186,35 @@ const SignUp = () => {
             {signUpError.message}
           </Alert>
         )}
+        <Dialog open={dialogOpen} onClose={handleClose}>
+          <DialogTitle>以下の項目が正しく入力されていません</DialogTitle>
+          <DialogContent>
+            {
+              <ul>
+                {Object.keys(formValidation)
+                  .filter(
+                    (key) => !formValidation[key as keyof typeof formValidation]
+                  )
+                  .map((key, index) => {
+                    return (
+                      <li key={index}>
+                        {
+                          formValidationLabel[
+                            key as keyof typeof formValidationLabel
+                          ]
+                        }
+                      </li>
+                    );
+                  })}
+              </ul>
+            }
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} autoFocus>
+              閉じる
+            </Button>
+          </DialogActions>
+        </Dialog>
       </Box>
     </Container>
   );

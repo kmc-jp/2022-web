@@ -4,7 +4,11 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import { Alert, AlertTitle } from "@mui/material";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
+import { useNavigate } from "react-router-dom";
+
+const cookie = require("cookie");
 
 const Login = () => {
   const [id, setId] = React.useState<string>("");
@@ -18,8 +22,10 @@ const Login = () => {
     message: "",
   });
 
+  const navigate = useNavigate();
   interface LoginType {
-    id: number;
+    user_id: number;
+    session: string;
   }
 
   const onClickLogin = async () => {
@@ -38,21 +44,28 @@ const Login = () => {
       })
       .then((result: AxiosResponse<LoginType>) => {
         const { data, status } = result;
-        console.log(data, status);
         if (status < 200 || status > 299) {
           setLogInError({
             error: true,
             message: "",
           });
-          return;
+          throw new Error();
         }
         setLogInError({
           error: false,
           message: "",
         });
+        document.cookie = cookie.serialize(
+          "user_id",
+          encodeURIComponent(data.user_id)
+        );
+        document.cookie = cookie.serialize(
+          "session",
+          encodeURIComponent(data.session)
+        );
+        navigate("/");
       })
       .catch((error: AxiosError<{ error: string }>) => {
-        console.error(error.message);
         setLogInError({
           error: true,
           message: error.message,
