@@ -6,8 +6,6 @@ services:
       MYSQL_ROOT_PASSWORD: p@ssw0rd!
     networks:
       - section-06-app-network
-    # volumes: 
-      # - ./db:/var/lib/mysql
     command: ["--default-authentication-plugin=mysql_native_password"]
     ports: 
       - 3306:3306

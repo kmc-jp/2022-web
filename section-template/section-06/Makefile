@@ -16,8 +16,3 @@ up:
 
 down:
 	docker-compose down --remove-orphans
-
-cmd:
-#	docker-compose run app rails g scaffold Sessions userId:string session:string
-# docker-compose run app rails generate migration add_index_to_Users_userId
-	docker-compose run app rails generate migration add_constraint_to_Sessions
