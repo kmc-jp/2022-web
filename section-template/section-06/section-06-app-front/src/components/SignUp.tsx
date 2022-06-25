@@ -147,7 +147,7 @@ const SignUp = () => {
             setFormValidation({
               ...formValidation,
               email:
-                /([0-9a-zA-Z]([0-9a-zA-Z\-\.])*@([0-9a-zA-Z][0-9a-zA-Z]*\.)+[a-zA-Z]{2,9})/.test(
+                /([0-9a-zA-Z]([0-9a-zA-Z\-.])*@([0-9a-zA-Z][0-9a-zA-Z]*\.)+[a-zA-Z]{2,9})/.test(
                   e.target.value
                 ),
             });
@@ -164,7 +164,7 @@ const SignUp = () => {
             setPassword(e.target.value);
             setFormValidation({
               ...formValidation,
-              password: /[0-9a-zA-Z\-_\/*+.,!#$%&()~|]+/.test(e.target.value),
+              password: /[0-9a-zA-Z\-_/*+.,!#$%&()~|]+/.test(e.target.value),
             });
           }}
         />
