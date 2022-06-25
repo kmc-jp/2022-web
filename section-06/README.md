@@ -1,4 +1,8 @@
-# 第6回
+# 第6回 サービスの立ち上げ
+
+## 🔨 サーバーの立ち上げ
+
+**Docker・Composeおよびmakeが必要です。** 
 
 まずは、リポジトリの更新に追従するために、
 
@@ -8,9 +12,6 @@ git pull
 
 を実行します。
 
-## 🔨 サーバーの立ち上げ
-
-**Docker・Composeおよびmakeが必要です。** Dockerを使用せず内容のみ理解したいという場合は、[今回の内容の概要](https://github.com/kmc-jp/2022-web/blob/main/section-06/About.md) に進んでください。
 
 1. まずは`2022-web`フォルダで以下のコマンドを実行します。
 
@@ -88,4 +89,4 @@ docker-compose run app rails db:migrate
 
 任意のIDで新規登録を行い、これらの機能が正しく使用できることを確認してください。
 
-ここまでできたら、[今回の内容の概要](https://github.com/kmc-jp/2022-web/blob/main/section-06/About.md) に進んでください。
+ここまでできたら、[今回の内容の概要](https://github.com/kmc-jp/2022-web/blob/main/section-06/README.md) に進んでください。

@@ -20,6 +20,10 @@
 - 第5回 可変レイアウト
   - [開発環境構築手順](https://github.com/kmc-jp/2022-web/blob/main/section-template/section-05/README.md)
   - [資料](https://github.com/kmc-jp/2022-web/blob/main/notes/section-05.md)
+- 第6回 パスワードの解析
+  - [内容の概要](https://github.com/kmc-jp/2022-web/blob/main/section-06/README.md)
+  - [サービスの立ち上げ](https://github.com/kmc-jp/2022-web/blob/main/section-06/About.md)
+  - [ヒント](https://github.com/kmc-jp/2022-web/blob/main/section-06/Hints.md)
 
 ## 裏講座
 - 第1回 イチからWebpackのconfigを書いてTypeScriptをコンパイルする
