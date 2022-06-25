@@ -10,7 +10,7 @@ git pull
 
 ## 🔨 サーバーの立ち上げ
 
-**Docker・Composeおよびmakeが必要です**
+**Docker・Composeおよびmakeが必要です。** Dockerを使用せず内容のみ理解したいという場合は、[今回の内容の概要](https://github.com/kmc-jp/2022-web/blob/main/section-06/About.md) に進んでください。
 
 1. まずは`2022-web`フォルダで以下のコマンドを実行します。
 
@@ -87,3 +87,5 @@ docker-compose run app rails db:migrate
 表示されたWebサービスは、新規登録・ログイン・ログアウトができるだけの簡単なものです。
 
 任意のIDで新規登録を行い、これらの機能が正しく使用できることを確認してください。
+
+ここまでできたら、[今回の内容の概要](https://github.com/kmc-jp/2022-web/blob/main/section-06/About.md) に進んでください。
