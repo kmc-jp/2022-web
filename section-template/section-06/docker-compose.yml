@@ -1,12 +1,14 @@
 version: '3'
 services:
   db:
-    image: mysql:8.0.28
+    build: ./db
     environment:
       MYSQL_ROOT_PASSWORD: p@ssw0rd!
     networks:
       - section-06-app-network
-    command: ["--default-authentication-plugin=mysql_native_password"]
+    volumes:
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./db/initdb.d:/docker-entrypoint-initdb.d
     ports: 
       - 3306:3306
   app:
