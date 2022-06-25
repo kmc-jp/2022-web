@@ -1,92 +1,17 @@
-# 第6回 サービスの立ち上げ
+# 第6回
 
-## 🔨 サーバーの立ち上げ
+Dockerを使用せず内容のみ理解したいという場合は、このまま概要に進んでください。Dockerを使用する環境が構築できている方は [第6回 サービスの立ち上げ](https://github.com/kmc-jp/2022-web/blob/main/section-06/About.md) の手順に従って、ぜひWebサービスを実際に立ち上げて確認しながらチャレンジしてみてください。
 
-**Docker・Composeおよびmakeが必要です。** 
+# 概要
 
-まずは、リポジトリの更新に追従するために、
+このWebサービスには既に2万人分のデータが登録されています。
 
-```
-git pull
-```
+今回はこのWebサービスから登録情報が漏洩したことを想定します。漏洩したデータは、 [db.json](https://raw.githubusercontent.com/kmc-jp/2022-web/main/section-06/db.json) にあります。
 
-を実行します。
+このデータをもとに、IDとパスワードの解析を行います。
 
+IDとパスワードの組をいくつ割り出すことができるでしょうか。ID・パスワードの組が正しいかどうかは、立ち上げたWebサービスにログインできるかどうかで確認できます。
 
-1. まずは`2022-web`フォルダで以下のコマンドを実行します。
+時間があればPythonなどで簡単なスクリプトを書いて、解析を自動化するのにもチャレンジしてみてください。
 
-```bash
-cd section-template/section-06
-```
-
-2. 続いて、
-
-```bash
-make prepare
-```
-
-を実行します。
-
-> `make prepare` は最初の1回のみ実行すればよいです。2回以上実行すると、
-> 
-> ```
-> Error response from daemon: network with name section-06-app-network already exists
-> make: *** [Makefile:3: prepare] エラー 1
-> ```
-> 
-> などと出てエラーになりますがこれは問題ありません。
-
-3. 続いて、
-
-```bash
-make setup
-```
-
-を実行します。ログが流れ続けると思うので、止まるまで待ってください。(環境によっては10分以上かかるかもしれません)
-
-4. 最後に、
-
-```bash
-make up
-```
-
-と実行します。
-
-```
-Can't connect to MySQL server on 'db' (115)
-Couldn't create 'app_development' database. Please check your configuration.
-rails aborted!
-```
-
-などと出てエラーになる場合はまだ準備が終わっていないので、もうしばらく待ってください。
-
-成功するとこのようなログが流れます。
-
-```
-[+] Running 1/0
- ⠿ Container section-06-db-1  Running                                       0.0s
-Database 'app_development' already exists
-Created database 'app_test'
-docker-compose run app rails db:migrate
-[+] Running 1/0
- ⠿ Container section-06-db-1  Running                                       0.0s
-== 20220620155004 CreateSessions: migrating ===================================
--- create_table(:sessions)
-   -> 0.0390s
-== 20220620155004 CreateSessions: migrated (0.0390s) ==========================
-
-== 20220621145811 AddConstraintToSessions: migrating ==========================
--- add_foreign_key(:sessions, :users, {:column=>:user_id, :primary_key=>"user_id"})
-   -> 0.1021s
--- add_index(:sessions, [:user_id, :session])
-   -> 0.0363s
-== 20220621145811 AddConstraintToSessions: migrated (0.1386s) =================
-```
-
-5. ここまでできれば準備は完了です。http://localhost:32000 にアクセスしてください。
-
-表示されたWebサービスは、新規登録・ログイン・ログアウトができるだけの簡単なものです。
-
-任意のIDで新規登録を行い、これらの機能が正しく使用できることを確認してください。
-
-ここまでできたら、[今回の内容の概要](https://github.com/kmc-jp/2022-web/blob/main/section-06/README.md) に進んでください。
+[ヒントと解答](https://github.com/kmc-jp/2022-web/blob/main/section-06/Hints.md)
